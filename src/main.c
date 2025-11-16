@@ -15,7 +15,7 @@ int main(){
     float preco[LIMITE_MAXIMO];//array pra armazenar os preços dos produtos
 
     do
-    {//menu de controle
+    { //menu de controle
         printf("===========================================\n");
         printf("          MENU DE CONTROLE DE ESTOQUE\n");
         printf("===========================================\n");
