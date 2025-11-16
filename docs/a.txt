@@ -1,0 +1,65 @@
+Nome do projeto: Controle de estoque de papelaria  
+
+Objetivo geral: Gerenciar estoque  
+
+Principais funcionalidades previstas: Visualizar, inserir e gerenciar produtos de uma empresa  
+
+Autor: Kainã Samuel Ribeiro Cantanhede e João Paulo Gomes Nogueira 
+
+Etapas futuras: Implementar todas as funções 
+
+ 
+
+Requisitos Funcionais: 
+
+O sistema deve permitir cadastrar novos produtos; 
+
+O sistema deve buscar produtos por código; 
+
+O sistema deve listar todos os produtos com status; 
+
+O sistema deve alertar quando estoque estiver abaixo do mínimo; 
+
+O sistema deve calcular a quantidade faltante para reposição. 
+
+Requisitos Não Funcionais: 
+
+O sistema deve responder em menos de 3 segundos; 
+
+O sistema deve ser intuitivo para novos usuários; 
+
+O sistema deve suportar no mínimo 50 produtos simultaneamente. 
+
+Tabela E/P/S: 
+
+Tipo 
+
+Descrição 
+
+Exemplo no sistema de Controle de Estoque 
+
+Entrada 
+
+Dados inseridos no sistema pelo usuário (ou por outra fonte). 
+
+Nome do Produto, Quantidade Adicionada, Código do Fornecedor. 
+
+Processamento 
+
+Operações, cálculos e validações realizadas internamente pelo sistema com os dados de entrada. 
+
+1. Atualizar Saldo: Novo_Estoque = Estoque_Atual + Quantidade_Adicionada.  
+
+2. Verificar Ponto de Pedido: Comparar Novo_Estoque com a quantidade mínima de segurança. 
+
+ 
+
+ 
+
+Saída 
+
+Resultados, informações ou relatórios apresentados ao usuário após o processamento. 
+
+Relatório de Saldo Atualizado, Mensagem de Alerta (se o estoque estiver abaixo do mínimo), Registro da Transação no histórico. 
+
+ 

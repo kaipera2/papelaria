@@ -1,0 +1,349 @@
+# Projeto Integrador (Parte 2).
+
+## Introdução.
+
+A **Parte 2** é focada em **implementação**. Você já planejou tudo na **Parte 1** (documentação, requisitos, fluxograma, modularização). Agora é hora de **codificar**.
+
+Outro ponto de atenção: o roteiro apresenta etapas gerais para a implementação do seu projeto. **Adapte cada etapa de acordo com as suas necessidades.** O importante é que ele te ajude a organizar e realizar as tarefas de implementação com base no que você planejou na Parte 1, portanto, **não tente encaixar seu projeto exatamente no formato do roteiro**, e sim **adaptar o roteiro à realidade do que você decidiu criar!**
+
+<aside>
+💡
+
+**Importante:** este roteiro assume que você completou a **Parte 1** conforme indicado no AVA. Se não completou, você ainda pode fazer esta parte, mas **sofrerá redução de nota**.
+
+</aside>
+
+## Aviso sobre uso de IA.
+
+Uso de ferramentas de IA generativa para resolver este projeto resultará em **nota zero**. Todo o projeto deve ser feito/escrito **por você**, com base no seu próprio planejamento.
+
+## Etapa 1: Preparação do ambiente.
+
+## O que fazer:
+
+Abra a documentação que você criou na **Parte 1** e revise:
+
+- Você tem o **nome do projeto**?
+- Você tem os **requisitos funcionais** listados?
+- Você tem a tabela **E/P/S** preenchida?
+- Você tem o **fluxograma ou pseudocódigo**?
+- Você identificou os **módulos** (funções) do sistema?
+- Você tem as **assinaturas das funções** definidas?
+
+Se alguma coisa está faltando, volte à Parte 1 e complete agora. Não adianta codificar sem planejamento.
+
+Crie a estrutura de pastas em seu computador:
+
+```markdown
+meu_projeto/
+├── src/
+│   └── main.c
+├── docs/
+│   └── (copie seus arquivos da Parte 1 aqui)
+└── backup/
+```
+
+Abra seu editor de código e crie o arquivo **`src/main.c`** vazio.
+
+## Etapa 2: Estrutura base do programa.
+
+## O que fazer:
+
+**2.1. Adicione cabeçalho e includes.**
+
+No começo do **`main.c`**, escreva:
+
+- Um comentário com o **nome do projeto**, **seu nome**, **data de criação** e uma **breve descrição**.
+- Os includes necessários para seu projeto (**`stdio.h`**, **`stdlib.h`**, **`string.h`**, etc.).
+
+**2.2. Defina constantes e estruturas.**
+
+Baseado na documentação da Parte 1:
+
+- Defina constantes necessárias (ex.: tamanho máximo de vetores, limite de registros, tamanho de strings).
+
+**2.3. Declare as funções.**
+
+Liste todas as funções que você planejou na Parte 1. Use as assinaturas que você definiu:
+
+- Nome da função;
+- Parâmetros;
+- Tipo de retorno.
+
+Não implemente ainda, apenas **declare**.
+
+**2.4. Compile e teste.**
+
+No terminal, compile seu arquivo via `gcc`. Se houver erros, corrija. Seu programa ainda não faz nada, mas deve compilar sem problemas.
+
+## Etapa 3: Implementação da função main().
+
+## O que fazer:
+
+**3.1. Implemente a função main().**
+
+Baseado no seu **fluxograma** da Parte 1:
+
+- Qual é a **sequência de eventos** que seu programa deve fazer?
+- O programa tem um **menu** que se repete?
+- Quando o usuário **sai**?
+
+Escreva a lógica da função main refletindo esse fluxo. Use variáveis para **controlar o estado** do programa (ex.: uma variável que mantém o programa rodando enquanto o usuário não escolhe "sair").
+
+**3.2. Teste frequentemente.**
+
+Após cada mudança, compile e execute via `gcc`. Seu programa deve rodar sem travamentos.
+
+## Etapa 4: Implementação das funções de menu.
+
+## O que fazer:
+
+**4.1. Função de menu.**
+
+Baseado no seu planejamento:
+
+- Quantas opções seu menu tem?
+- Como essas opções relacionam com as **funcionalidades principais**?
+
+Implemente uma função que:
+
+- **Exibe** as opções de forma clara e organizada.
+- **Lê** a escolha do usuário.
+
+**4.2. Controle de fluxo com menu.**
+
+Baseado no seu fluxograma:
+
+- O programa tem um **menu único** ou **vários menus**?
+- Como o usuário **navega** entre opções?
+- O que acontece quando escolhe uma opção inválida?
+
+Implemente essa lógica na função main ou em função apropriada.
+
+**4.3. Teste diferentes cenários.**
+
+- O que acontece se o usuário digita um número fora do intervalo?
+- O que acontece se digita uma letra no lugar de número?
+- O menu se repete corretamente?
+
+## Etapa 5: Implementação da coleta de dados.
+
+## O que fazer:
+
+**5.1. Função de entrada.**
+
+Baseado na tabela E/P/S da Parte 1:
+
+- Que **informações** seu programa precisa coletar?
+- Em que **ordem** faz sentido coletar?
+- Que **tipo de dado** é cada informação (inteiro, float, string)?
+
+Implemente uma função que **coleta cada informação** de forma clara.
+
+**5.2. Validação de entrada.**
+
+Para cada informação coletada, pergunte-se:
+
+- Há **restrições** para essa informação? (ex.: número deve estar entre 1 e 100, string não pode ser vazia)
+- Se o usuário digita algo **inválido**, o que fazer? (mostrar erro e pedir novamente)
+
+Implemente **validação** para cada entrada. Use **repetição** se necessário para pedir novamente.
+
+**5.3. Armazenamento de dados.**
+
+Baseado no seu planejamento:
+
+- Os dados entram em **vetores**? Em que ordem?
+- Os dados entram em **matrizes**?
+- Quantos vetores você precisa? Um para cada tipo de informação?
+
+Implemente o armazenamento conforme planejou.
+
+**5.4. Teste com dados extremos.**
+
+- O que acontece se coleta o **número máximo** de registros?
+- O que acontece se tenta coletar **além do limite**?
+- Validação rejeita entradas inválidas?
+
+## Etapa 6: Implementação do processamento.
+
+## O que fazer:
+
+**6.1. Função de processamento.**
+
+Baseado nos seus **requisitos funcionais** da Parte 1:
+
+- Que **cálculos** o programa faz?
+- Que **buscas** faz?
+- Que **ordenações** faz?
+- Que **comparações** faz?
+
+Implemente uma função para cada operação principal.
+
+**6.2. Acesso aos dados.**
+
+Pergunte-se:
+
+- Como a função vai **acessar** os dados coletados?
+- Precisa passar **vetores** ou **matrizes** como parâmetros?
+- Precisa de **ponteiros** para modificar dados?
+
+Implemente o acesso apropriado.
+
+**6.3. Teste a lógica.**
+
+Para cada processamento:
+
+- Com dados **válidos**, produz resultado correto?
+- Com dados **vazios**, não trava?
+- Com dados **extremos**, funciona?
+
+## Etapa 7: Implementação da exibição de resultados.
+
+## O que fazer:
+
+**7.1. Função de exibição.**
+
+Baseado no seu **fluxograma** e tabela **E/P/S** da Parte 1:
+
+- O que precisa ser **mostrado** ao usuário?
+- Em que **formato**? (tabela, linhas, resumo)
+- Em que **ordem**?
+
+Implemente uma função que exibe os dados de forma clara e organizada.
+
+**7.2. Formatação e clareza.**
+
+- Os dados são **fáceis de ler**?
+- Há **rótulos** explicando o que é cada coisa?
+- Dados **numéricos** têm precisão apropriada (ex.: 2 casas decimais)?
+
+**7.3. Teste a exibição.**
+
+- Com dados **vazios**, não trava?
+- Com muitos dados, fica legível?
+- Informações importantes são **visíveis**?
+
+## Etapa 8: Boas práticas de codificação.
+
+## O que fazer:
+
+**8.1. Nomes significativos.**
+
+Revise seu código:
+
+- Suas **variáveis** têm nomes que descrevem o que armazenam?
+- Suas **funções** têm nomes que descrevem o que fazem?
+- Evitou nomes genéricos como **`x`**, **`temp`**, **`dado`**, **`resultado`**?
+
+Se encontrar nomes ruins, renomeie.
+
+**8.2. Comentários úteis.**
+
+Adicione comentários:
+
+- No **início de cada função** explicando o que ela faz.
+- Em **seções complexas** do código.
+- **Evite** comentários óbvios (ex.: "incrementa x" quando há **`x++`**).
+
+**8.3. Indentação consistente.**
+
+Revise seu código:
+
+- Toda a **indentação** segue o mesmo padrão (4 espaços ou 1 tab)?
+- **Chaves** estão alinhadas corretamente?
+- **Blocos if/while/for** estão bem estruturados visualmente?
+
+Se houver inconsistências, corrija.
+
+**8.4. Compilação sem warnings.**
+
+Compile com o `gcc` (não via IDE). Qualquer **warning** que apareça, **corrija**. Não deixe para depois. Warnings indicam problemas potenciais.
+
+## Etapa 9: Testes sistemáticos.
+
+## O que fazer:
+
+**9.1. Casos de teste.**
+
+Baseado na tabela E/P/S da Parte 1, defina **pelo menos 5 casos de teste**:
+
+Para cada caso, documente:
+
+- O que você vai fazer (ação)
+- O que esperava que acontecesse (resultado esperado)
+- O que realmente aconteceu (resultado obtido)
+- Se passou ou falhou
+
+**9.2. Teste cada funcionalidade.**
+
+- Menu funciona?
+- Coleta de dados funciona?
+- Validação rejeita inválidos?
+- Processamento calcula/busca/ordena corretamente?
+- Exibição mostra dados corretos?
+
+**9.3. Teste casos extremos.**
+
+- Sem dados inseridos, o programa trata corretamente?
+- Com muitos dados (próximo ao limite), funciona?
+- Com entrada vazia ou espaços em branco, valida corretamente?
+- Com números muito grandes ou muito pequenos, processa?
+
+**9.4. Documentar bugs.**
+
+Se encontrar problema:
+
+- O que não funcionou?
+- Como você descobriu?
+- O que você mudou para corrigir?
+
+Anote tudo. Isso mostra que você testou e depurou.
+
+## Etapa 10: Revisão final.
+
+## Checklist
+
+Antes de entregar, marque:
+
+- [ ]  Código compila sem erros usando **`gcc` ;**
+- [ ]  Programa executa sem travamentos;
+- [ ]  Menu funciona e oferece opções claras;
+- [ ]  Dados podem ser inseridos;
+- [ ]  Validação funciona (rejeita entradas inválidas);
+- [ ]  Dados são armazenados corretamente em vetores/matrizes;
+- [ ]  Processamento produz resultados esperados;
+- [ ]  Resultados são exibidos de forma clara;
+- [ ]  Código tem nomes significativos;
+- [ ]  Funções estão bem comentadas;
+- [ ]  Indentação é consistente;
+- [ ]  Compilação não produz warnings;
+- [ ]  Testes cobrem casos principais e extremos;
+- [ ]  Bugs encontrados foram documentados e corrigidos;
+- [ ]  Documentação da Parte 1 está organizada em **`docs/` .**
+
+## Entrega:
+
+**Arquivo .zip contendo:**
+
+- Arquivo **`src/main.c`** com seu código completo;
+- Pasta **`docs/`** com documentação da Parte 1;
+- Arquivo com registro de testes e bugs corrigidos.
+
+## O que vem depois:
+
+A **Parte 3** tratará de:
+
+- Separar código em múltiplos arquivos;
+- Organizar no GitHub;
+- Criar README e versionamento.
+
+Por enquanto, foque em **implementar bem**.
+
+## Observações finais:
+
+- Código sem estrutura da Parte 1 sofrerá redução de nota.
+- Código com evidência de uso de IA geradora sofrerá nota zero.
+- Não tenha pressa. Codificar bem leva tempo.
+
+**Bom trabalho! 💻**

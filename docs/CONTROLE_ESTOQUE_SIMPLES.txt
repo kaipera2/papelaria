@@ -1,0 +1,142 @@
+Algoritmo "Controle_Estoque_Simples"
+// Descrição: Menu interativo para controle de estoque
+// Autor(a): Kainã e joao
+Var
+    // Limite de produtos
+    CONST LIMITE_MAXIMO = 50
+
+    // Variáveis
+    opcao: inteiro
+    total_produtos: inteiro
+
+    // Vetores para armazenar dados dos produtos
+    codigo: vetor [1..LIMITE_MAXIMO] de inteiro
+    nome: vetor [1..LIMITE_MAXIMO] de caracter
+    qntd: vetor [1..LIMITE_MAXIMO] de inteiro
+    preco: vetor [1..LIMITE_MAXIMO] de real
+    estoqueminimo: vetor [1..LIMITE_MAXIMO] de inteiro
+
+    // Variáveis auxiliares
+    i, cod_busca: inteiro
+    encontrado: logico
+    status_estoque: caracter
+
+Inicio
+    total_produtos <- 0
+
+    repita
+        // --- MENU PRINCIPAL ---
+        escreval("===========================================")
+        escreval("          MENU DE CONTROLE DE ESTOQUE")
+        escreval("===========================================")
+        escreval("1 - Inserir Novo Produto")
+        escreval("2 - Verificar Estoque de um Produto")
+        escreval("3 - Listar todos os Produtos e Status")
+        escreval("0 - Sair do Programa")
+        escreval("-------------------------------------------")
+        escreva("Escolha uma opção: ")
+        leia(opcao)
+        escreval()
+
+        escolha opcao
+            caso 1 // INSERIR NOVO PRODUTO
+                se total_produtos < LIMITE_MAXIMO entao
+                    total_produtos <- total_produtos + 1
+                    escreval(">>> Cadastro do Produto #", total_produtos, " <<<")
+
+                    escreva("Código do produto: ")
+                    leia(codigo[total_produtos])
+
+                    escreva("Nome do produto: ")
+                    leia(nome[total_produtos])
+
+                    escreva("Preço unitário: R$")
+                    leia(preco[total_produtos])
+
+                    escreva("Quantidade atual em estoque: ")
+                    leia(qntd[total_produtos])
+
+                    escreva("Estoque mínimo desejado: ")
+                    leia(estoqueminimo[total_produtos])
+
+                    escreval()
+                    escreval("Produto cadastrado com sucesso!")
+                senao
+                    escreval("ERRO: Limite máximo de produtos atingido (", LIMITE_MAXIMO, ").")
+                fimse
+
+            caso 2 // VERIFICAR ESTOQUE DE UM PRODUTO
+                se total_produtos = 0 entao
+                    escreval("Nenhum produto cadastrado.")
+                senao
+                    escreval(">>> Verificar Estoque <<<")
+                    escreva("Digite o CÓDIGO do produto: ")
+                    leia(cod_busca)
+
+                    encontrado <- falso
+
+                    para i de 1 ate total_produtos faca
+                        se codigo[i] = cod_busca entao
+                            encontrado <- verdadeiro
+
+                            // Análise de Estoque
+                            se qntd[i] < estoqueminimo[i] entao
+                                status_estoque <- "BAIXO - NECESSITA REPOSIÇÃO URGENTE!"
+                            senao
+                                status_estoque <- "OK - ESTOQUE SUFICIENTE"
+                            fimse
+
+                            // Exibe o Relatório
+                            escreval("-------------------------------------------")
+                            escreval("RELATÓRIO DO PRODUTO (Cód. ", codigo[i], "):")
+                            escreval("Produto: ", nome[i])
+                            escreval("Quantidade Atual: ", qntd[i])
+                            escreval("Estoque Mínimo: ", estoqueminimo[i])
+                            escreval("STATUS ATUAL: ", status_estoque)
+
+                            se status_estoque = "BAIXO - NECESSITA REPOSIÇÃO URGENTE!" entao
+                                escreval("A falta é de ", (estoqueminimo[i] - qntd[i]), " unidades.")
+                            fimse
+                            escreval("-------------------------------------------")
+
+                            interrompa // Sai do 'para'
+                        fimse
+                    fimpara
+
+                    se nao encontrado entao
+                        escreval("ERRO: Produto com código ", cod_busca, " não encontrado.")
+                    fimse
+                fimse
+
+            caso 3 // LISTAR TODOS OS PRODUTOS E STATUS
+                se total_produtos = 0 entao
+                    escreval("Nenhum produto cadastrado.")
+                senao
+                    escreval("===========================================")
+                    escreval("      LISTA GERAL DE PRODUTOS E STATUS")
+                    escreval("===========================================")
+
+                    para i de 1 ate total_produtos faca
+                        // Análise de Estoque
+                        se qntd[i] < estoqueminimo[i] entao
+                            status_estoque <- "BAIXO"
+                        senao
+                            status_estoque <- "OK"
+                        fimse
+
+                        escreval("Cód: ", codigo[i], " | Produto: ", nome[i], " | Qtd: ", qntd[i], " | Status: ", status_estoque)
+                    fimpara
+                fimse
+
+            caso 0 // SAIR
+                escreval("Saindo do programa. Até mais!")
+
+            outrocaso // OPÇÃO INVÁLIDA
+                escreval("Opção inválida. Por favor, escolha 1, 2, 3 ou 0.")
+
+        fimescolha
+        escreval()
+
+    ate opcao = 0
+
+Fimalgoritmo
