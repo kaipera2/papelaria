@@ -1,0 +1,9 @@
+Tamanho e Organização:
+- O código estava concentrado em um único arquivo (src/main.c).
+- A função main estava muito grande.
+
+Estrutura de Dados:
+- Eram usados 5 vetores separados para armazenar dados de produtos (codigo_produto[], nome[], preco[], qntd[], estoqueminimo[]).
+4. Oportunidades de Melhoria Identificadas:
+- Criação de uma struct para produtos, agrupando os dados.
+- Separação em módulos: um para interagir com usuário e outro para gerenciar os produtos.

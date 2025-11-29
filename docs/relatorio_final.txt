@@ -1,0 +1,20 @@
+Desafios encontrados:
+
+Todas as exigências específicas do trabalho a natureza do projeto que envolvia a manipulação de estruturas (struct Produto) , como o código (int) , nome (char[50]) , preço (float) , quantidade (int) , e estoque_minimo (int) , junto com constantes (LIMITE_MAXIMO e TAM_NOME) e bastante tempo para se fazer isso ser minimamente funcional
+
+Como resolveu:
+
+Para tornar mais simples nossa vida fizemos uma divisão do trabalho onde o projeto foi dividido em duas partes com uma divisão por igual das tarefas. No fim as partes foram juntadas para formar o trabalho final como um todo.
+
+Aprendizados:
+
+
+Linguagem C: Basicos sobre a linguagem C.
+
+Modularização: Noções sobre modularização.
+
+Git: Tutorial do YouTube.
+
+Melhorias futuras:
+
+Não há intenção de adicionar melhorias ou funcionalidades futuras ao projeto.

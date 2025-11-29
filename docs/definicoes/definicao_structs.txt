@@ -1,0 +1,12 @@
+Struct: Produto
+Descrição: Estrutura principal que representa um item individual na papelaria.
+Campos:
+  - [int] codigo: Identificador numérico único do produto;
+  - [char] nome[50]: Nome do produto;
+  - [float] preço: o preço do produto kkkkk;
+  - [int] quantidade: Quantidade em estoque;
+  - [int] estoque_minimo: Quantidade mínima.
+
+Constantes associadas:
+  - LIMITE_MAXIMO (50): Define o tamanho máximo do vetor de estoque.
+  - TAM_NOME (50): Define o tamanho máximo da string de nome.

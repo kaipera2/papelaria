@@ -1,0 +1,35 @@
+Módulo: Lógica de Produto (Processamento)
+Arquivo: src/produto.c
+Header: include/produto.h
+Descrição: Serve pra fazer as operações onde adiciona, busca ou verificar.
+Funções:
+  - adicionar_produto: Insere um novo registro;
+  - buscar_produto_por_codigo: Procura o indice do produto;
+  - verificar_status_baixo: verifica se ta certo o estoque de produtos.
+Dependências: apenas bibliotecas padrões.
+
+---------------------------------------------------------
+
+Módulo: Interface de Usuário (Entrada/Saída)
+Arquivo: src/interface.c
+Header: include/interface.h
+Descrição: a comunicação visual com o usuário.
+Funções:
+  - exibir_menu: Mostra as opções e captura a escolha;
+  - ler_dados_produto: lê os inputs do usuário;
+  - exibir_sucesso_cadastro: resposta visual das ações;
+  - exibir_erro_limite: Mensagem de erro de validação;
+  - exibir_erro_produto_nao_encontrado: resposta dos erro de busca;
+  - exibir_detalhes_produto: Formata e mostra os dados de um produto;
+  - listar_todos_produtos: Vai buscando os produtos e mostrando em uma listinha.
+Dependências: Módulo Produto (precisa conhecer a struct Produto).
+
+---------------------------------------------------------
+
+Módulo: Principal (Controle)
+Arquivo: src/main.c
+Header: tem não
+Descrição: é a parte principal, ela que chama as outras partes do codigo quando necessario.
+Funções:
+  - main: Função principal.
+Dependências: include/produto.h, include/interface.h.
